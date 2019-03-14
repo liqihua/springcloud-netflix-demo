@@ -1,0 +1,14 @@
+server:
+  port: 9300 #指定服务端口
+  servlet:
+      context-path: /orderConsumerContext #项目上下文
+
+spring:
+  application:
+    name: order-consumer
+
+eureka:
+  client:
+    registerWithEureka: false #是否将eureka自身作为应用注册到eureka注册中心，false表示当前服务不需要到eureka服务上注册
+    serviceUrl:
+      defaultZone: http://localhost:9200/eureka/ #eureka-server部署的地址
